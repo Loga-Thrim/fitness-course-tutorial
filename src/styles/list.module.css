@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.boxRow{
+    display: flex;
+    flex-direction: row;
+}
