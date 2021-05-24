@@ -5,6 +5,7 @@ import ShowCourse from './pages/ShowCourse';
 import CheckBill from './pages/CheckBill';
 import Login from './pages/Login';
 import InsertLevel from './pages/InsertLevel';
+import Uploadvideos from './pages/Uploadvideos';
 
 import LoginCheck from './components/LoginCheck';
 
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/upload-videos">
+          <Uploadvideos />
         </Route>
       </Switch>
     </div>

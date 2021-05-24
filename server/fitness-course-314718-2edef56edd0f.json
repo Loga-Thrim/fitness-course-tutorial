@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fitness-course-314718",
+  "private_key_id": "2edef56edd0fcc5678e6c792f85dee424ff2baa3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCVDxmHv/Wg5JG9\norFbb5TRh323fW/NyQ0EJNn+szutpMRa32d+1KIxRBtOyDwR65n04vqiVTLmkC8C\nbrlw7AEp1a6lhYCfN7keINFcTdz/6NEGy5j0FqklCDIDyPB/Jdz09l1DYZ7/axN/\na4bAkUkV7XSZpezJRgpb9EqeaAK7GXE9tssHofnWtmdsXsGFgLPMutOlWEZ+nxAk\nfnzbUfw52bPnYqodmRgmXUZcuYC0fBCkKqNdqEftMXTNNI2tp8zhvUphJ5XKrVEv\nR4pMUCs/Q+pL9EVXDbWm/r6UCLLQ5vpBHcH1bhNLyl2Thy2S4C5e/4C9EAjJfJqk\nA11NNf5xAgMBAAECggEAB/ZblvUbyQ9+osRzoIqTRrZL8pLZd6LYTnbsu2qd+uyK\n1d8aUWPIwnSUuBqRfWRSR/reODDQiFEORs0s/B2KQh6lTreU/2RPz96BSoLJBfVN\nAaW7btn9SPJxMAMySBt43C/DG33l6zdQPkGrXALixmBl5q1+qqGCfQcdm4y7LRz1\n1L0rVHA8iJFsKf7cASFZH37sm6QxCtrPq2i7hMV2kzZ3c3gWXVn+AHksffFix9PQ\nBl20HJsph3NG4/mcqf1gu+D4OPTat/xct8uMvKYumwPbAUiGdqEtF0pBJnD5lSOW\ncyMvlSNRtYoSC9cfFDkOZQYs/P14fWELtJ5g0TasYQKBgQDRL374XjhBpMJUzVmQ\n2gFlafG8tRk15A6vwJeKR0XR5kwd7taPB2iIvtPmiK0cB6VYJnbu8vxjl1BjCW3o\nhwozLbDB8fwMdfrZycPWImqJjbCYuUHe1V5ivv86KtWj8STc6qdSHZQ+xMewqSC/\nC6OPZa/EjMvQPbnXmBi6imHzkQKBgQC2auCvDihE8wb49uzNebRsOmOersba9mlh\nYALCS/Jc9lsMZfyLYD137dHH12JzXfOz+eTm3VcY32zD4rLp78N6GnJmJxunw02i\nPcrHn5qFmCYXB7pilUENW1s53PGp3XvFKK0JZJpA+8D2BUZ8eFrdGPqdnUb/HwGc\nqpIbniIs4QKBgGE5bg4J3KPF6/x2JPbKHHQCNbS7hyghAyJ0pPpD/hN8skwHQfng\nO5my99HiHHM2qoa5+fU9QkkXfulI7Khyey8mQU0jJz6zZw/qUvcnr9SW4klZcWAc\nU24Zz449cmZsIfH7riDgVpKF6zoUoX+p7S8s1/DGb8QtrD6kFno87yHBAoGASBXQ\nGB02GJkZBkU9qq0PeT1RpKFYf6qkVhCExpcQfV/09t9Ofx1W7Q+TuK8KfqB/730u\n0XRiOLgB2R66qOtQie3tiySlLxRkl1pnyZ7uhyBq3Or24oIspMSXNjRzYzbc9Dpw\ntqeEtW1HAXFwOzusXHbEgohmR+bO0kQtXLCOvMECgYAJD0cRzi7EYMpcgNVJZJvh\nnn72ECLRO0XcT+AVlD48QqHWQwaY2S30JR3/ZJumiaBy1xXzy45Hp8vkOvLcj73x\nBJfX91Uz0d57V72rJ4mYsWKZiWmOxZ+uc4+zVLOZToJZZGH0jI1EmGQGHK83ROTn\nzIu70QfOnSUUvwcSv5LA6g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "fitness-course@fitness-course-314718.iam.gserviceaccount.com",
+  "client_id": "118172942598175252071",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fitness-course%40fitness-course-314718.iam.gserviceaccount.com"
+}

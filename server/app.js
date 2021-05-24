@@ -9,6 +9,14 @@ const fileUpload = require("express-fileupload");
 const urlMongo = "mongodb://localhost:27017";
 const jwt = require("jsonwebtoken");
 const UniqueStringGenerator = require('unique-string-generator');
+const { Storage } = require("@google-cloud/storage");
+const fs = require("fs");
+
+const gc = new Storage({ 
+    keyFilename: __dirname + "/fitness-course-314718-2edef56edd0f.json",
+    projectId: 'fitness-course-314718'
+})
+const filesBucket = gc.bucket('video-course');
 
 app.use(cors());
 app.use(bodyParser.urlencoded());
@@ -80,7 +88,6 @@ mongo.connect(urlMongo, { useUnifiedTopology: true }, (err, db)=>{
             })
         })
     })
-
     app.get("/get-one-course/:id", (req, res)=>{
         const id = req.params.id;
         dbcon.collection("course").findOne({_id: ObjectId(id)}, (err, result)=>{
@@ -136,6 +143,58 @@ mongo.connect(urlMongo, { useUnifiedTopology: true }, (err, db)=>{
                 })
             })
         });
+    })
+    app.post("/upload-videos", async (req, res)=>{
+        const { videos } = req.files;
+
+        async function mvFile(i){
+            return new Promise((resolve, reject)=>{
+                const fileName = UniqueStringGenerator.UniqueStringId() + "." + 
+                videos[i].name.split(".").slice(-1)[0];
+                videos[i].mv(__dirname + "/videos/" + fileName, err=>{
+                    if(err) throw err;
+                    filesBucket.upload(__dirname + "/videos/" + fileName, (err, file)=>{
+                        if(err) throw err;
+                        fs.unlinkSync(__dirname + "/videos/" + fileName);
+                        resolve(fileName);
+                    })
+                })
+            })
+        }
+        let arr = [];
+        for(let i=0;i<videos.length;++i){
+            const fileName = await mvFile(i);
+            await arr.push(ObjectId(fileName));
+
+            if(i == videos.length - 1){
+                dbcon.collection("course").update({_id: arr}, {$push: {level: {
+                    name, price, level, video: fileName
+                }}}, (err, doc)=>{
+                    if(err) throw err;
+                    res.json({status: "success"})
+                })
+                res.json({fileName: arr});
+            }
+        }
+    })
+
+    app.get("/verify-bucket", (req, res)=>{
+        const storage = new Storage();
+        async function listBuckets() {
+          try {
+            const results = await storage.getBuckets();
+  
+            const [buckets] = results;
+  
+            console.log('Buckets:');
+            buckets.forEach(bucket => {
+              console.log(bucket.name);
+            });
+          } catch (err) {
+            console.error('ERROR:', err);
+          }
+        }
+        listBuckets();
     })
 })
 

@@ -37,7 +37,7 @@ export default function Login() {
             
             <div style={{width: 800}}>
                 <ReactPlayer 
-                    url={[{src: '/videos/MjMy-MTYyMTI3Mjc0NjE0MQ==-ODM2.mp4', type: 'video/mp4'}]}
+                    url='https://youtu.be/Rq5SEhs9lws'
                     controls  // gives the front end video controls 
                     width='100%' 
                     height='100%'
